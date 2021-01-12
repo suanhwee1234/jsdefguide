@@ -6,9 +6,25 @@
     <title>Digital Clock</title>
     <style>
       #clock {
-        font: ;
+        font: bold 24px sans-serif;
+        background: #ddf;
+        padding: 15px; /*surround it with some space*/
+        border: solid black 2px;
+        border-radius: 10px;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <h1>Digital Clock</h1>
+    <span id="clock"></span>
+<script>
+  function displayTime(){
+    let clock = document.querySelector("#clock");
+    let now = new Date();
+    clock.textContent=now.toLocaleTimeString();
+  }
+  displayTime();
+  setInterval(displayTime,1000);
+</script>
+  </body>
 </html>
