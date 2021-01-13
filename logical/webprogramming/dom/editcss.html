@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="tooltip" class="hidden">tool tip here</p>
+    <script>
+      // Assume that this "tooltip" element has class="hidden" inthe HTML file.// We can make it visible like this:
+      document.querySelector("#tooltip").classList.remove("hidden"); // And we can hide it again like this:
+      document.querySelector("#tooltip").classList.add("hidden");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- style property: is a CSSStyleDeclarationobject: a parsed representation of 
+the CSS styles that appear in textualform in the style attribute -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="tooltip">tooltip</p>
+    <!-- <button>teleport</button> -->
+    <script>
+      function displayAt(tooltip, x, y) {
+        console.log("tii: %o", tooltip);
+        tooltip.style.display = "block";
+        tooltip.style.position = "absolute";
+        tooltip.style.left = `${x}px`;
+        tooltip.style.top = `${y}px`;
+        tooltip.style.fontSize = "3em";
+      }
+      let x = 100;
+      document.getElementById("tooltip").onclick = function () {
+        displayAt(event.target, x, 0);
+        x = x + 100;
+      };
+    </script>
+  </body>
+</html>
